@@ -1,119 +1,96 @@
-# 🏨 Hotel Booking Analytics
+# Hotel Booking Analytics
 
-## About the Project
+A data analysis project that explores hotel bookings, cancellations, customer behaviour, pricing, and booking trends.
 
-Hotel Booking Analytics is a data analysis project focused on understanding hotel booking behaviour, cancellation patterns, customer segments, pricing, and country-wise booking activity.
+## About
 
-The project takes the hotel booking dataset through different stages of data preparation, analysis, database querying, spreadsheet reporting, and dashboard visualization.
+This project uses hotel booking data to find useful patterns related to:
 
----
+- Bookings
+- Cancellations
+- Hotel types
+- Customer types
+- Average Daily Rate (ADR)
+- Booking lead time
+- Country-wise bookings
 
-## 🎯 Project Objectives
+The analysis is carried out using Python, SQL, Excel, and Power BI.
 
-- Understand overall hotel booking behaviour
-- Analyse booking and cancellation patterns
-- Compare City Hotel and Resort Hotel
-- Study customer types and ADR
-- Examine the relationship between lead time and cancellations
-- Identify countries with the highest completed bookings
-- Present the results using Excel and Power BI
+## Project Workflow
 
----
+1. Data preparation using Python and Pandas
+2. Tourism data collection using BeautifulSoup
+3. Business analysis using PostgreSQL
+4. Report preparation using Excel
+5. Dashboard creation using Power BI
 
-## 🔄 Project Workflow
+## Python & Pandas
 
-Raw Booking Data
-        ↓
-Python & Pandas
-        ↓
-Data Cleaning & Transformation
-        ↓
-PostgreSQL Analysis
-        ↓
-Excel Reporting
-        ↓
-Power BI Dashboard
-
-A separate web-scraping stage is also included to collect tourism-related information.
-
----
-
-## 🐍 Python & Pandas
-
-Python and Pandas are used to prepare and analyse the hotel booking dataset.
+Python and Pandas are used to prepare the hotel booking dataset.
 
 The work includes:
 
-- Loading the dataset
-- Understanding the dataset structure
+- Loading and inspecting the dataset
 - Checking missing values
 - Removing duplicate records
-- Cleaning inconsistent values
-- Creating derived columns
-- Performing basic statistical analysis
+- Cleaning inconsistent data
+- Creating additional columns
+- Performing basic analysis
 
-### Created Fields
+### Additional Columns
 
 - `Total_Guests`
 - `Stay_Nights`
 - `Booking_Status`
 
-The final cleaned data is stored in:
+Output file:
 
 `cleaned_dataset.csv`
 
----
+## Web Scraping
 
-## 🌐 Web Scraping
+Tourism-related information is collected from an external website using Python.
 
-Tourism-related information is collected from an external web source using Python.
-
-Technologies used:
+Libraries used:
 
 - Requests
 - BeautifulSoup
 - Pandas
 
-The collected information is stored in:
+The collected information is saved in:
 
 `scraped_data.csv`
 
-The scraping code is available in:
+Scraping notebook:
 
 `tourism_scraping.ipynb`
 
----
+## SQL Analysis
 
-## 🗄️ SQL Analysis
+PostgreSQL is used to answer the main business questions.
 
-PostgreSQL is used to analyse the cleaned booking data and answer important business questions.
+The analysis includes:
 
-The SQL analysis covers:
+- Hotel with the highest cancellation percentage
+- Monthly booking patterns
+- Average ADR by customer type
+- Lead time and cancellation analysis
+- Top 5 countries based on completed bookings
 
-1. Hotel with the highest cancellation percentage
-2. Months with the highest booking volume
-3. Average ADR by customer type
-4. Relationship between lead time and cancellation
-5. Top 5 countries based on completed bookings
-
-The queries are available in:
+SQL file:
 
 `sql_queries.sql`
 
----
+## Excel Analysis
 
-## 📊 Excel Analysis
-
-Microsoft Excel is used for additional analysis and reporting.
+Excel is used to create additional summaries and visual analysis.
 
 The workbook contains:
 
-- Booking summaries
-- Hotel-wise analysis
-- Booking status analysis
-- Average ADR analysis
-- Cancellation-rate analysis
 - Pivot tables
+- Booking summaries
+- Cancellation analysis
+- ADR analysis
 - Conditional formatting
 - Monthly booking trend
 
@@ -121,46 +98,37 @@ Excel file:
 
 `analysis.xlsx`
 
----
+## Power BI Dashboard
 
-## 📈 Power BI Dashboard
+The Power BI dashboard presents the main findings in an interactive format.
 
-The final results are presented using an interactive Power BI dashboard.
+It includes:
 
-The dashboard focuses on:
-
-- Total bookings
-- Successful bookings
-- Cancellation rate
-- Average ADR
-- Average stay duration
+- Booking KPIs
+- Cancellation analysis
 - Monthly booking trends
 - Hotel comparison
 - Customer type analysis
-- Country-wise bookings
-- Lead-time cancellation patterns
+- Country-wise booking analysis
+- ADR analysis
 
-Power BI file:
+Dashboard file:
 
 `dashboard.pbix`
 
----
-
-## 🔎 Key Results
+## Key Findings
 
 The cleaned dataset contains 87,389 hotel bookings.
 
-The analysis highlights several important patterns:
+Some of the main observations are:
 
 - City Hotel has the larger share of bookings
-- Cancellation behaviour differs between hotel types
+- Cancellation levels vary between hotel types
 - August has a high booking volume
 - Transient customers have the highest average ADR
-- Lead time can be examined as an indicator of cancellation risk
+- Lead time can be useful when studying cancellation behaviour
 
----
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - Pandas
@@ -172,9 +140,7 @@ The analysis highlights several important patterns:
 - Power BI
 - GitHub
 
----
-
-## 👥 Team
+## Team
 
 ### Stormbreaker
 
@@ -185,17 +151,19 @@ The analysis highlights several important patterns:
 - gotham kumar
 - hemanth
 
----
+## Files
 
-## 📁 Repository Contents
+| File | Description |
+|---|---|
+| `analysis.ipynb` | Main Python analysis |
+| `tourism_scraping.ipynb` | Web scraping |
+| `cleaned_dataset.csv` | Cleaned booking dataset |
+| `scraped_data.csv` | Scraped tourism data |
+| `sql_queries.sql` | SQL analysis queries |
+| `analysis.xlsx` | Excel analysis |
+| `dashboard.pbix` | Power BI dashboard |
+| `project_summary.pdf` | Project summary |
 
-```text
-analysis.ipynb
-tourism_scraping.ipynb
-cleaned_dataset.csv
-scraped_data.csv
-sql_queries.sql
-analysis.xlsx
-dashboard.pbix
-project_summary.pdf
-README.md
+## Conclusion
+
+This project combines data cleaning, analysis, database queries, spreadsheet reporting, and visualization to understand hotel booking behaviour and cancellation patterns.
